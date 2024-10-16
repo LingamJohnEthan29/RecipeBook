@@ -1,0 +1,76 @@
+.recipe-detail {
+    display: flex; // Use flexbox for layout
+    padding: 20px;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px var(--shadow-color);
+
+    .preparation-level {
+        margin-top: 0.5em;
+    }
+
+    .image-container {
+        width: 50%; // Set width for the image container
+        display: flex;
+        flex-direction: column; // Stack title and description vertically
+        align-items: center; // Center the image
+
+        h1 {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin-bottom: 5px; // Reduced margin for better spacing
+        }
+
+        p {
+            margin-bottom: 0; // Remove bottom margin
+        }
+
+        img {
+            width: 100%; // Set width to 100% of the container
+            height: auto;
+            aspect-ratio: 1 / 1; // Maintain a square aspect ratio
+            border-radius: 10px;
+            object-fit: cover;
+            padding: 1em; // Add padding around the image
+        }
+    }
+
+    .details {
+        width: 50%; // Set width for the details
+        padding: 20px; // Add padding for spacing
+        display: flex;
+        flex-direction: column; // Stack elements vertically
+
+        h2 {
+            color: var(--text-color);
+            margin-top: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: disc;
+            li {
+                background: var(--background-light);
+                margin: 7px 0;
+                padding: 3px;
+                border: 2px solid var(--border-color);
+                border-radius: 4px;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background: var(--hover-background);
+                }
+            }
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+    }
+}
